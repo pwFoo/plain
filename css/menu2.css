@@ -1,0 +1,82 @@
+/**
+ * default menu item / link styling
+ */
+.menu input[type=checkbox] + label {
+    background-color: darkgrey;
+    border: 1px solid black;
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+}
+.menu ul input[type=checkbox] + label {
+    background-color: lightgrey;    /* submenu label background like menu item / link */
+}
+.menu li a {
+    background-color: lightgrey;
+    display: block;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+/**
+ * Prepare toggle checkbox / label
+ */
+.menu ul > li > input[type=checkbox] + label {
+    display: block;
+}
+
+/* hide checkbox */
+.menu input[type=checkbox] {
+    display: none;
+}
+/* indicator submenu opened */
+.menu input[type=checkbox] + label:after {
+   content: " (+)";
+}
+/* indicator submenu closed */
+.menu input[type=checkbox]:checked + label:after {
+    content: " (-)";
+}
+
+
+/**
+ * menu magic ;)
+ */
+.menu input[type=checkbox]:not(:checked) ~ div.menu_container > ul {
+    display: none;
+}
+
+.menu .menu_container {
+    position: relative;
+}
+
+.menu .stretch,
+.menu > .menu_container:not(.inline) > ul,
+.menu > .menu_container.inline > ul > li > .menu_container > ul {
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+}
+
+/*
+.menu .menu_container:not(.inline) {
+    position: absolute;
+    z-index: 1000;
+}
+
+.menu .menu_container:not(.inline) > ul > li {
+    width: 100%;
+}
+
+.menu .menu_container.inline > ul,
+.menu .menu_container:not(.inline).full > ul {
+    left: 0;
+    right: 0;
+}
+
+.menu .menu_container.inline {
+    position: relative;
+}
+*/

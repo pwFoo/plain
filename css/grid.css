@@ -1,0 +1,34 @@
+.grid {
+    display: ms-flexbox;    /* IE10 */
+    display: -webkit-flex;  /* Safari */
+    display: flex;  /* Chrome, Opera, Firefox */
+    flex-wrap: wrap;    /* automatic row support */
+    justify-content: space-between; /* auto gutter / margin between flex items */
+    /* ul/li compatibility */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.grid > * {
+    -ms-flex: 1 1 auto;   /* IE10 */
+    -webkit-flex: 1 1 auto;   /* Safari */
+    flex: 1 1 auto; /* Chrome, Opera, Firefox */
+    height: auto;   /* equal item height! */
+}
+
+.grid > .fix,
+.grid > .full {
+    -ms-flex: 1 1 1;    /* IE10 */
+    -webkit-flex: 1 1 1;  /* Safari */
+    flex: 1 1 1;    /* Chrome, Opera, Firefox */
+}
+
+.grid > .full {
+    width: 100%;
+}
+
+.break {
+    width: 100%;
+    height: 0px;
+}

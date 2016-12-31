@@ -1,0 +1,49 @@
+.button {
+    /*-webkit-transition: all 500ms ease;
+    transition: all 250ms linear;*/
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    color: #fff;
+    /*border: 1px solid transparent;*/
+    box-shadow: 2px 4px 3px grey;
+    }
+
+/**
+ * button hover background image effect
+ */
+.button:hover {
+    /*border: 1px solid grey;*/
+    opacity: 0.8;
+}
+
+/**
+ * button active / clicked background image effect
+ */
+.button:active {
+    top: 4px;
+    -webkit-box-shadow: inset 1px 2px 1.5px #888;
+    box-shadow: inset 1px 1px 1.5px #888;
+}
+
+/**
+ * rounded buttons helper class
+ */
+.button.rounded {
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+/**
+ * Font Awesome icon before
+ */
+ .button[data-fa-icon]:before {
+     display: inline-block;
+     font-family: FontAwesome;
+     content: attr(data-fa-icon);
+     margin-right: 0.5em;
+ }

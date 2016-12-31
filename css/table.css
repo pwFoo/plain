@@ -1,0 +1,69 @@
+/**
+ * Quelle: http://maddesigns.de/responsive-tables-2393.html
+ * Demo: http://codepen.io/anon/pen/ggYbOV
+ * Alternativer Artikel: https://blog.kulturbanause.de/2012/06/tabellen-im-responsive-webdesign/
+ */
+
+ /**
+  * responsive table
+  */
+ table.plain {
+     width: 100%;
+ }
+
+/**
+ * desktop table base style
+ */
+table.plain th, table.plain td {
+  padding: 6px 12px;
+  vertical-align: top;
+  text-align: left;
+}
+
+/**
+ * default odd row background color
+ */
+table.plain tr:nth-child(odd) {
+  background-color: #ccc;
+}
+
+/**
+ * table row hover highlighting
+ */
+table.plain tr:hover {
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
+    opacity: 0.9;
+}
+
+/**
+ * mobile table layout
+ */
+ @media screen and (max-width: 600px) {
+     table.plain thead {
+         display: none;
+     }
+
+     table.plain tr {
+         display: block;
+         margin-bottom: 10px;
+         border: 2px solid #a9a9a9;
+     }
+
+     table.plain td {
+         display: block;
+         text-align: right;
+         border-bottom: 1px dotted #000000;
+     }
+
+     table.plain td:last-child {
+       border-bottom: 0;
+     }
+
+     table.plain td:before {
+       content: attr(data-label);
+       float: left;
+       text-transform: uppercase;
+       font-weight: bold;
+     }
+}
